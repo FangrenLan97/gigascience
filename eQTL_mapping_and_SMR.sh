@@ -75,19 +75,19 @@ ${smr_path}/smr_Linux --beqtl-summary ${myqtl_path}/ChickenGTEx.Liver.cis_qtl_pa
 
 ###cis
 yhrun -N 1 -n 1 -c 20 ${smr_path}/smr_Linux --bfile ${genotype_plink} \
---gwas-summary xyz_AFP.txt \
+--gwas-summary HSC.txt \
 --beqtl-summary ${myqtl_path}/ChickenGTEx.Liver.cis_qtl_pairs \
 --diff-freq-prop 0.5 \
 --heidi-mtd 1 \
 --peqtl-smr 1e-6 \
---out ${outPath}/xyz_AFP_cis
+--out ${outPath}/HSC_cis
 ###trans
 yhrun -N 1 -n 1 -c 20 ${smr_path}/smr_Linux --bfile ${genotype_plink} \
---gwas-summary xyz_AFP.txt \
+--gwas-summary HSC.txt \
 --beqtl-summary ${myqtl_path}/ChickenGTEx.Liver.trans_qtl_pairs \
 --diff-freq-prop 0.5 \
 --heidi-mtd 1 \
 --peqtl-smr 1e-6 \
 --trans \
 --peqtl-trans 3.3156e-7 \
---out ${outPath}/xyz_AFP_trans
+--out ${outPath}/HSC_trans
